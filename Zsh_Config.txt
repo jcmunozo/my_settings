@@ -1,0 +1,72 @@
+		WSL
+
+First: you need to enable WSL in windows:
+
+You have two opcions:
+	1. Control panel -> enable or disable Windows features ->
+	enable wsl and Virtual platform
+	2. run next comand in powershell:
+
+	Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+second: You need to install linux distribution
+
+you can do it, like this:
+
+	wsl --install -d <Distribution Name>
+	put username and password and then you have
+	linux in windows.
+
+	
+		ZSH
+
+
+I use windows terminal preview,to open linux terminal.
+
+installation:
+	run the next comands:
+		sudo apt install zsh
+	verication:
+		--version
+	default shell:
+		chsh -s $(which zsh)
+	Restart your Computer
+
+	You can verify the default shell, with the next comand:
+	echo $SHELL
+
+		Oh-My-Zsh
+
+Installation:
+	You need to install git and node.js for some oh-my-zsh's plugins
+	then, run the next comand:
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Install theme:
+	open the zshrc file with any code editor:
+	example: 
+		vim ~/.zshrc
+	then you can change the theme, changing:
+		ZSH_THEME="robbyrussell"
+		by
+		ZSH_THEME="another theme"
+
+see https://github.com/ohmyzsh/ohmyzsh
+
+
+		powerlevel10k
+
+installation:
+	run the next comand:
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+	change ZSH_THEME by:
+
+	ZSH_THEME="powerlevel10k/powerlevel10k"
+	
+	restart terminal, and now yo can set you prompt as you want
+
+	if you want to configure again, just run the next comand:
+		p10k configure
+
+see https://github.com/romkatv/powerlevel10k
