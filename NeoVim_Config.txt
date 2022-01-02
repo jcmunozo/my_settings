@@ -1,0 +1,70 @@
+
+	Chocolatey
+
+First, you need to install chocolatey
+got to https://chocolatey.org/install
+put the following command in powershell:
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+Dont worry for warnings
+
+	NeoVim
+
+Second, intall neovim with chocolatey
+go to https://community.chocolatey.org/packages/neovim/0.6.1
+Run in your powershell temrinal the following command to install neovim:
+	choco install neovim
+	A<Enter> = Yes all
+	verify:
+		nvim
+		and show you a welcome message
+
+If you want to upgrade Neovim run the following command:
+
+	choco upgrade neovim
+
+	Vim Plug
+
+Installation:
+Go to https://github.com/junegunn/vim-plug
+run the following command:
+	iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+
+route of installation:
+	home/Appdata/local/nvim-data/site/autoload/plug.vim
+
+
+So, you need to create a nvim directory in the next route:
+	home/Appdata/local/
+	create directory nvim
+	and create inside nvim directory a new directory named
+	plugged, in this directory we will be installing all 
+	nvim pluggins.
+
+	create a file named init.vim
+
+	routes:
+	home/Appdata/local/nvim
+	home/Appdata/local/nvim/plugged
+	home/Appdata/local/nvim/init.vim
+
+	
+
+
+	My nvim configuration
+
+put in init.vim:
+
+"basic configuration
+
+set number
+ser relativenumber
+set mouse=a
+syntax enable
+set encoding=utf-8
+set sw=4
+set nowrap
+set clipboard=unnamed
+set termguicolors
+
