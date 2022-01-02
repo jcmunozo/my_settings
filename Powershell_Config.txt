@@ -1,0 +1,59 @@
+This configurations is used in windows terminal preview
+windows terminal preview give you many options to configurations
+
+installation:
+	"windows Powershell" comes by default in windows, buy 
+	if you prefer, you can install "powershell" (similar to windows powershell) from microsotf store.
+	You can use anyone. 
+
+Configuration:
+	i used oh-my-posh to give to my shell's prompt a friendly aspect 
+	you can get information here: www.ohmyposh.dev
+
+	installation in powershell:
+
+		put in your powershell's prompt the next comand:
+
+		Install-Module oh-my-posh -Scope CurrentUser
+
+		and Yes all! ;)
+
+	For list all oh-my-posh`s themes put the next comand:
+	
+		Get-PoshThemes
+	
+	If your chosen theme does'nt work as it should, you must download a font.
+
+		to get fonts go to www.nerdfonts.com
+
+		i downloaded FiraCode Nerd Font and install all. then, you must
+		go to "windows terminal preview" settings and select your font.
+	
+	File icons
+		go to https://github.com/devblackops/Terminal-Icons.
+		Terminal-Icons is a powershell module to show file and
+		folder icons in the terminal -> README.md
+
+		installation:
+			run as administrator
+			Install-Module -Name Terminal-Icons -Repository PSGallery
+
+	set up $profile
+		see Config_Powershell_Profile.txt 
+		
+		Usage oh-my-posh - Terminal-Icons
+		
+		inside your powershell's profile type the next:
+
+			Import -Module -Name Terminal-Icons
+			Import -Module oh-my-posh
+			Set-PoshPrompt -Theme patriksvensson 
+			
+			patriksvensson is my chosen theme, you can use another,
+			just change the name to anyone in get-poshthemes.
+
+see 
+	Config_Powershell_Profile.txt
+	Config_Windows_Terminal_Preview.txt
+
+	

@@ -1,0 +1,24 @@
+**** $profile ****
+
+open a terminal and put the next comands:
+
+1. $profile <enter>	// shows the route to $profile
+2. test-path $profile <enter> // shows if the file exists, with boolean result
+3. if does'nt exist, put the next comand:
+	ni -Path $profile -force
+4. You can edit the file with:
+	vim $profile
+	notepad $profile
+5. enable the powershell's scripts in Windows:
+	Settings -> Update & Security -> For developers
+	-> enable developer mode 
+	-> powershell -> local powershell's scripts -> apply 
+
+
+Make you own alias with functions in $profile file as follows
+
+function alias_name { route }
+
+example:
+
+	function disc_d {cd D:}
