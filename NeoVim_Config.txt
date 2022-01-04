@@ -56,15 +56,19 @@ So, you need to create a nvim directory in the next route:
 
 put in init.vim:
 
-"basic configuration
+set number		"shows number line
+set relativenumber	"Shows relative number
+set mouse=a		"allows iteration with mouse
+set encoding=utf-8	"allows special characters
+set sw=4		"4-spaces indentation
+set nowrap		"infinite text line (no matter the scren)
+set clipboard=unnamed 	"allows copy & paste <->
 
-set number
-ser relativenumber
-set mouse=a
-syntax enable
-set encoding=utf-8
-set sw=4
-set nowrap
-set clipboard=unnamed
-set termguicolors
+" Vim-plug
+
+call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be installed
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/preservim/nerdtree'
+call plug#end()
+
 
