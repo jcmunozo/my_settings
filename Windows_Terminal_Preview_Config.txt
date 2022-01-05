@@ -6,7 +6,7 @@ fragment of json of windows terminal preview, i like this
     "initialCols": 127,
     "initialPosition": "40,50",
     "initialRows": 25,
-    "launchMode": "focus",
+    "launchMode": "Default",
     "profiles": 
     {
            "colorScheme": "One Half Dark",
