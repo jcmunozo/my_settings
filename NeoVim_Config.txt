@@ -65,6 +65,13 @@ set nowrap		"infinite text line (no matter the scren)
 set clipboard=unnamed 	"allows copy & paste <->
 
 " Vim-plug
+source ~/AppData/Local/nvim/vim-plug/plugins.vim
+
+
+
+put in plugins.vim
+
+" plugins.vim
 
 call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be installed
 Plug 'https://github.com/vim-airline/vim-airline'
