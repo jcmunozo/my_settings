@@ -19,6 +19,8 @@ Run in your powershell temrinal the following command to install neovim:
 		nvim
 		and show you a welcome message
 
+also install ripgrep
+		choco install ripgrep 
 If you want to upgrade Neovim run the following command:
 
 	choco upgrade neovim
@@ -54,43 +56,186 @@ So, you need to create a nvim directory in the next route:
 
 	My nvim configuration
 
-put in init.vim:
+*	put in init.vim:
 
-set number		"shows number line
-set relativenumber	"Shows relative number
-set mouse=a		"allows iteration with mouse
-set encoding=utf-8	"allows special characters
-set sw=4		"4-spaces indentation
-set nowrap		"infinite text line (no matter the scren)
-set clipboard=unnamed 	"allows copy & paste <->
+ Basic configuration
 
-" Vim-plug
-source ~/AppData/Local/nvim/vim-plug/plugins.vim
+syntax enable		        "syntax highlighing
+set number		          " shows number line
+set relativenumber	    " Shows relative number
+set mouse=a		          " allows iteration with mouse
+set hidden		          " open multiple buffers
+set encoding=utf-8	    " allows special characters
+set fileencoding=utf-8	" The encoding written to file
+set sw=4		            " 4-spaces indentation
+set expandtab           " Expand tabs to spaces. Essential in Python.
+set nowrap		          " infinite text line (no matter the scren)
+set clipboard=unnamed 	" allows copy & paste <->
+set pumheight=10	      " Makes popup menu smaller
+set ruler		            " show the cursor all time
+set showtabline=2	      " always show tabs
+set cursorline          " Enable highlighting of the current line
+set showtabline=2       " Always show tabs
+set nobackup            " This is recommended by coc
+set nowritebackup       " This is recommended by coc
+set smartindent         " auto ident
+set noswapfile          " no create a swap file"
+set ignorecase          " for search no matter lower or upper case
+set numberwidth=1       " put the number line aline
+set splitbelow          " split next window below
+set splitright          " splir next window right
+set nocompatible        " this come with polyglot
+
+"Vim-plug
+    source ~/AppData/Local/nvim/vim-plug/plugins.vim
+"Mappings
+    source ~/AppData/Local/nvim/general/settings.vim
+"themes 
+    source ~/AppData/Local/nvim/themes/onedark.vim
 
 
-
-put in plugins.vim
-
-" plugins.vim
+* Put in /vim-plug/plugins.vim
 
 call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be installed
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/preservim/nerdtree'
+    "airline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    "nerd tree
+    Plug 'scrooloose/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
+    " Auto pairs for '(' '[' '{'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'alvan/vim-closetag' 
+    " theme
+    Plug 'joshdick/onedark.vim'    
+    "polyglot
+    Plug 'sheerun/vim-polyglot'    
+    "coc
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "fzf
+    "Plug 'junegunn/fzf.vim' 
+    "telescope
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
-" mapinngs
 
-" set leader key
-let g:mapleader = "\<Space>"
+** Recomendations 
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+If you have this problem with coc and python:
+[coc.nvim] Error on execute python script: request error nvim_comand - Vim(pyxfile):E319: No "python3" provider found.
+i fix this with:
+python3 -m pip install --user --upgrade pynvim
+python -m pip install --user --upgrade pynvim
+this solution i found in https://dev.to/andreneji/comment/1ah5g 
+
+
+for python autocomplete i installed:
+coc-jedi
+and intall: pip install -U jedi-language-server
+
+
+* Put in /general/mappings.vim
+
+"Use plugins
+" let g:airline_theme="onedark"
+let g:airline#extensions#tabline#enabled = 1
+
+
+"all mappins that i use
+
+"leader
+let mapleader=" "
+
+"option file
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wq :wq<CR>
+
+";
+nnoremap <leader>; $a;<Esc>
+
+"nerdtree
+map <leader>nt :NERDTreeFocus<CR>
+
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
+
+" split terminal
+tnoremap <Esc> <C-\><C-n> " mapping for exit of terminal
+nnoremap <c-t> :split<CR>:terminal Powershell<CR>:resize 10<CR>
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+" Moves blocks of code in visual mode or V-Line
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+"tnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" Use of telescope with defaults mappings:
+" <C-n>/<Down>      Next item
+" <C-p>/<Up>        Previous item
+"j/k                Next/Previous (in normal mode)
+"H/M/L              Select High/Middle/Low(in normal mode)
+"'gg/G'             Select the first/Last item(in normal mode)
+"<CR>               Confirm selection
+"<C-x>              Go to file selection as a split
+"<C-v>              Go to file selection as a vsplit
+"<C-t>              Go to a file in a new tab
+"<C-u>              Scroll up in preview window
+"<C-d>              Scroll down in a preview window
+"<C-/>              Show mappings for picker actions(inser mode)
+"?                  Show mappings for picker actions(normal mode)
+"<C-c>              Close telescope
+"<Esc>              Close telescope(in normal mode)
+"<Tab>              Toggle selection and move to next selection
+"<S-Tab>            Toggle selection and move to prev selection
+"<C-q>              Send all items not filtered to quickfixlist(qflist)
+"<M-q>              Send all selected items to qflist 
 
 
+*Put in /themes/onedark.vim
 
+" onedark.vim override: Don't set a background color when running in a terminal;
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
+hi Comment cterm=italic
+let g:onedark_hide_endofbuffer=1
+let g:onedark_terminal_italics=1
+let g:onedark_termcolors=256
+
+syntax on
+colorscheme onedark
+
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif

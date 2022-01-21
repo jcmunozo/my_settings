@@ -4,3 +4,7 @@ My settings for:
 	Powershell
 	Zsh (WSL)
 	NeoVim
+
+My dir structure
+
+	
