@@ -2,7 +2,7 @@ This configurations is used in windows terminal preview
 windows terminal preview give you many options to configurations
 
 installation:
-	"windows Powershell" comes by default in windows, buy 
+	"windows Powershell" comes by default in windows, but 
 	if you prefer, you can install "powershell" (similar to windows powershell) from microsotf store.
 	You can use anyone. 
 
