@@ -1,0 +1,171 @@
+step 1 Wsl config:
+
+	requirements: windows version 2004 compilation 19041 and next. execute winver and you find this information.
+	
+	enable: Virtual machine platform & Windows subsystem for linux
+	go to: control panel -> uninstall programs -> enable and disable features of system
+	and then: check the options Virtual machine platform & Windows subsystem for linux
+	and: restart your computer
+
+	To install kernel wsl 2:
+	go to:https://docs.microsoft.com/es-es/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+	download and install. just you know, check Yes and install.
+	
+	download ubuntu 20.04 LTS from microsoft store 
+
+	wsl -l -v (show your version)
+	wsl --list (show linux distribution)
+	wsl --set-default-version 2 (wsl 2 by default)
+	wsl --set-version Ubuntu-20-04 2 (Ubuntu by default)
+
+Step 2 windows terminal config:
+	
+	download from microsoft store and that is all.
+
+	In windows terminal you can use multiple shells.
+
+	fragment of settings.json of windows terminal preview, i like this
+    
+    	"copyFormatting": "none",
+    	"copyOnSelect": false,
+    	"defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    	"initialCols": 127,
+    	"initialPosition": "40,50",
+    	"initialRows": 25,
+    	"launchMode": "Default",
+    	"profiles": 
+    	{
+           	"colorScheme": "One Half Dark",
+           	"font": 
+           	{
+              		"face": "FuraCode Nerd Font Mono"
+           	},     
+           	"hidden": false,
+           	"opacity": 80,
+           	"useAcrylic": true,
+           	"experimental.retroTerminalEffect": false
+     	},
+
+
+Step 3 windows Powershell config:
+	
+	"windows Powershell" comes by default in windows, but 
+	if you prefer, you can install "powershell" (similar to windows powershell) from microsotf store.
+	You can use anyone.
+
+	You also can custom it with your powershell profile:
+ 
+
+	1. enable the powershell's scripts in Windows:
+		Settings -> Update & Security -> For developers
+		-> enable developer mode 
+		-> powershell -> local powershell's scripts -> apply 
+
+	open a terminal like administrator and put the next comands:
+
+	2. $profile <enter>	// shows the route to $profile
+	3. test-path $profile <enter> // shows if the file exists, with boolean result
+	4. if does'nt exist, put the next comand:
+		ni -Path $profile -force
+	5. You can edit the file with:
+		vim $profile
+		notepad $profile
+	
+	
+	OH-MY-POSH
+
+	Configuration:
+
+	i used oh-my-posh to give to my shell's prompt a friendly aspect 
+	you can get information here: www.ohmyposh.dev
+
+	installation in powershell like Admin:
+
+		put in your powershell's prompt the next comand:
+
+		Install-Module oh-my-posh -Scope CurrentUser
+		and Yes all! ;)
+		Install-Module posh-git -Scope CurrentUser
+
+		and Yes all! ;)
+
+	For list all oh-my-posh`s themes put the next comand:
+	
+		Get-PoshThemes
+
+	if get-poshthemes is not recognized: 
+	   1. in your comand line powershell put: Update-Module oh-my-posh
+
+	   2. just put this in your $profile:
+		Import-Module oh-my-posh
+		Set-PoshPrompt -Theme paradox
+		
+	   
+	
+	If your chosen theme does'nt work as it should, you must download a font.
+
+		to get fonts go to www.nerdfonts.com
+
+		i downloaded FiraCode Nerd Font and install all in disc(C)->Windows->Fonts (copy/paste). 
+		then, you must go to "windows terminal" settings.json and put in profile secction:
+		
+		"Profiles":{
+			"defaults":{
+                           "colorScheme": "One Half Dark",
+           		   "font": 
+           		   {
+              			"face": "FuraCode Nerd Font Mono"
+           		   },     
+           		   "hidden": false,
+                           "opacity": 80,
+                           "useAcrylic": true
+                           "experimental.retroTerminalEffect": false,
+			}
+		}
+		           
+	
+	File icons
+		go to https://github.com/devblackops/Terminal-Icons.
+		Terminal-Icons is a powershell module to show file and
+		folder icons in the terminal -> README.md
+
+		installation run as administrator:
+			Install-Module -Name Terminal-Icons -Repository PSGallery
+		
+		Usage (oh-my-posh - Terminal-Icons):
+		
+			inside your powershell's profile type the next:
+
+				Import -Module -Name Terminal-Icons
+	
+	Fragment of my $profile of windows powershell
+
+	********************
+	Import-Module posh-git
+	Import-module oh-my-posh
+	Import-Module Terminal-Icons
+	Set-PoshPrompt -Theme patriksvensson
+	
+	#my functions
+	function take {
+  		param([string]$archivo)
+  		mkdir $archivo
+  		cd $archivo
+	}
+	
+	new-alias -name activate .\.env\Scripts\activate
+	function sf {Get-ChildItem -Force}
+	function email {start edge www.gmail.google.com}
+	#univercity
+	function unicauca { cd 'D:\3. Unicauca' ; ls }
+
+	********************
+
+	Make you own alias with functions in $profile file as follows
+
+	function alias_name { route }
+
+	example:
+
+		function disc_d {cd D:}		       
+ 

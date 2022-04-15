@@ -1,4 +1,4 @@
-fragment of json of windows terminal preview, i like this
+fragment of settings.json of windows terminal preview, i like this
     
     "copyFormatting": "none",
     "copyOnSelect": false,

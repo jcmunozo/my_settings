@@ -10,50 +10,64 @@ Configuration:
 	i used oh-my-posh to give to my shell's prompt a friendly aspect 
 	you can get information here: www.ohmyposh.dev
 
-	installation in powershell:
+	installation in powershell like Admin:
 
 		put in your powershell's prompt the next comand:
 
 		Install-Module oh-my-posh -Scope CurrentUser
+		and Yes all! ;)
+		Install-Module posh-git -Scope CurrentUser
 
 		and Yes all! ;)
 
 	For list all oh-my-posh`s themes put the next comand:
 	
 		Get-PoshThemes
+
+	if get-poshthemes is not recognized: 
+	   1. in your comand line powershell put: Update-Module oh-my-posh
+
+	   2. just put this in your $profile:
+		Import-Module oh-my-posh
+		Set-PoshPrompt -Theme paradox
+		
+	   
 	
 	If your chosen theme does'nt work as it should, you must download a font.
 
 		to get fonts go to www.nerdfonts.com
 
-		i downloaded FiraCode Nerd Font and install all. then, you must
-		go to "windows terminal preview" settings and select your font.
+		i downloaded FiraCode Nerd Font and install all in disc(C)->Windows->Fonts (copy/paste). 
+		then, you must go to "windows terminal" settings.json and put in profile secction:
+		
+		"Profiles":{
+			"defaults":{
+                           "colorScheme": "One Half Dark",
+           		   "font": 
+           		   {
+              			"face": "FuraCode Nerd Font Mono"
+           		   },     
+           		   "hidden": false,
+                           "opacity": 80,
+                           "useAcrylic": true
+                           "experimental.retroTerminalEffect": false,
+			}
+		}
+		           
 	
 	File icons
 		go to https://github.com/devblackops/Terminal-Icons.
 		Terminal-Icons is a powershell module to show file and
 		folder icons in the terminal -> README.md
 
-		installation:
-			run as administrator
+		installation run as administrator:
 			Install-Module -Name Terminal-Icons -Repository PSGallery
-
-	set up $profile
-		see Config_Powershell_Profile.txt 
 		
-		Usage oh-my-posh - Terminal-Icons
+		Usage (oh-my-posh - Terminal-Icons):
 		
-		inside your powershell's profile type the next:
+			inside your powershell's profile type the next:
 
-			Import -Module -Name Terminal-Icons
-			Import -Module oh-my-posh
-			Set-PoshPrompt -Theme patriksvensson 
-			
-			patriksvensson is my chosen theme, you can use another,
-			just change the name to anyone in get-poshthemes.
+				Import -Module -Name Terminal-Icons
 
-see 
-	Config_Powershell_Profile.txt
-	Config_Windows_Terminal_Preview.txt
 
 	
