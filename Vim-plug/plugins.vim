@@ -8,12 +8,10 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag' 
-    " theme
+    "theme
     Plug 'joshdick/onedark.vim'    
     "polyglot
-    Plug 'sheerun/vim-polyglot'    
-    "coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'sheerun/vim-polyglot' 
     "fzf
     "Plug 'junegunn/fzf.vim' 
     "telescope
