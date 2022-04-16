@@ -41,13 +41,13 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 route of installation:
 	home/Appdata/local/nvim-data/site/autoload/plug.vim
 
-you must clone my repo: git clone git@github.com:jcmunozo/my_settings.git
+you must clone my repo: git clone git@github.com:jcmunozo/my_settings.git or download the zip i recommended the latter.
 change the name to nvim (my_settings -> nvim)
 then put in the next route:
 	C:\Users\YourUser\AppData\Local
 
 now open nvim in that route "C:\Users\YourUser\AppData\Local"
-all going fail but you must to put in the comand mode the next comand PlugInstall<Enter>
+all going fail but you must to put in the comand mode the next comand :PlugInstall<Enter>
 wait a minute when the process is finished, close the nvim and run again nvim, and you will have nvim full.
 
 
