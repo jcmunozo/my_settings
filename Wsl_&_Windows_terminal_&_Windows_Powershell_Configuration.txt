@@ -25,28 +25,36 @@ Step 2 windows terminal config:
 	In windows terminal you can use multiple shells.
 
 	fragment of settings.json of windows terminal preview, i like this
+ *******************************************************************   
     
-    	"copyFormatting": "none",
-    	"copyOnSelect": false,
-    	"defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    	"initialCols": 127,
-    	"initialPosition": "40,50",
-    	"initialRows": 25,
-    	"launchMode": "Default",
-    	"profiles": 
-    	{
-           	"colorScheme": "One Half Dark",
-           	"font": 
-           	{
-              		"face": "FuraCode Nerd Font Mono"
-           	},     
-           	"hidden": false,
-           	"opacity": 80,
-           	"useAcrylic": true,
-           	"experimental.retroTerminalEffect": false
-     	},
-
-
+		"copyFormatting": "none",
+    "copyOnSelect": false,
+    "initialPosition": "x,y",
+    "startOnUserLogin": false,
+    "initialCols": 120,
+    "initialRows": 30,
+    "centerOnLaunch": true,
+    "launchMode": "default",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "profiles": 
+    {
+        "defaults": {
+            "colorScheme": "One Half Dark",
+            "font": 
+            {
+               "face": "FuraCode Nerd Font Mono"
+            },     
+            "hidden": false,
+            "opacity": 80,
+            "useAcrylic": true,
+            "cursorShape": "bar",
+            "experimental.retroTerminalEffect": false
+        },
+        "list": 
+        	[.....]
+		}
+ *******************************************************************   
+  
 Step 3 windows Powershell config:
 	
 	"windows Powershell" comes by default in windows, but 

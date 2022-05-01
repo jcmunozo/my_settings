@@ -1,3 +1,10 @@
+Requirements:
+	install:
+	nodejs
+	git
+	python
+	yarn
+
 **** NeoVim configuration
 
 	Chocolatey

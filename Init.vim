@@ -1,5 +1,7 @@
 " Basic configuration
 
+autocmd!
+scriptencoding utf-8    "Set script encoding
 syntax enable		        "syntax highlighing
 set number		          " shows number line
 set relativenumber	    " Shows relative number

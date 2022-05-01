@@ -1,6 +1,35 @@
+let g:python3_host_prog = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10'
+let g:python_host_prog  = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10'
+
 "Use plugins
 " let g:airline_theme="onedark"
 let g:airline#extensions#tabline#enabled = 1
+
+"LSP  and completion configuration 
+
+
+"Snippets configuration
+let g:UtilSnipsExpandTrigger="<tab>"
+
+"Emmet configuration
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings={
+\ 'javascript':{
+\ 'extends':'jsx'
+\ }
+\ }
+
+
+"Commentary configuration
+vnoremap <C-M> :Commentary<CR>
+
+
+""*************************************************************
+"COC configuration
+"*************************************************************
+"COC configuration
+
 
 
 
@@ -21,7 +50,8 @@ nnoremap <leader>bd :bd<CR>
 
 "nerdtree
 map <leader>nt :NERDTreeFocus<CR>
-map <leader>nc :NERDTreeClose<CR>
+map <leader>nc :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
@@ -38,6 +68,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Moves blocks of code in visual mode or V-Line
+" shift K or shift J
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
