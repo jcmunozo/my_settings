@@ -1,15 +1,7 @@
-let g:python3_host_prog = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10'
-let g:python_host_prog  = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10'
-
 "Use plugins
-" let g:airline_theme="onedark"
+let g:airline_theme="onedark"
 let g:airline#extensions#tabline#enabled = 1
 
-"LSP  and completion configuration 
-
-
-"Snippets configuration
-let g:UtilSnipsExpandTrigger="<tab>"
 
 "Emmet configuration
 let g:user_emmet_mode='n'
@@ -25,14 +17,6 @@ let g:user_emmet_settings={
 vnoremap <C-M> :Commentary<CR>
 
 
-""*************************************************************
-"COC configuration
-"*************************************************************
-"COC configuration
-
-
-
-
 "all mappins that i use
 
 "leader
@@ -45,12 +29,13 @@ nnoremap <leader>wq :wq<CR>
 
 ";
 nnoremap <leader>; $a;<Esc>
+nnoremap <leader>: $a:<Esc>
+
 "Close present buffer
 nnoremap <leader>bd :bd<CR>
 
 "nerdtree
-map <leader>nt :NERDTreeFocus<CR>
-map <leader>nc :NERDTreeToggle<CR>
+map <leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
 " Use alt + hjkl to resize windows
@@ -60,7 +45,7 @@ nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
 " split terminal
-tnoremap <Esc> <C-\><C-n> " mapping for exit of terminal
+tnoremap <Esc> <C-\><C-n>  " mapping for exit of terminal <Esc> + leader + q
 nnoremap <c-t> :split<CR>:terminal Powershell<CR>:resize 10<CR>
 
 " Better tabbing
