@@ -7,13 +7,20 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    
+   
+    " git integration
+    Plug 'airblade/vim-gitgutter'
+
     " style
     Plug 'yggdroot/indentline'
     Plug 'lilydjwg/colorizer'
     "nerd tree
     Plug 'scrooloose/nerdtree'
     Plug 'ryanoasis/vim-devicons'
+    
+    "icons in telescope
+    Plug 'kyazdani42/nvim-web-devicons'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag' 

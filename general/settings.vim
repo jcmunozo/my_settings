@@ -47,6 +47,10 @@ nnoremap <leader>bd :bd<CR>
 map <leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
+" gitgutter
+nmap <leader>h <Plug>(GitGutterNextHunk)
+nmap <leader>l <Plug>(GitGutterPrevHunk)
+
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
@@ -82,6 +86,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fw <cmd>Telescope grep_string<cr>
+nnoremap <leader>gt <cmd>Telescope git_branches<cr>
+nnoremap <leader>gs <cmd>Telescope git_status<cr>
 " Use of telescope with defaults mappings:
 " <C-n>/<Down>      Next item
 " <C-p>/<Up>        Previous item
