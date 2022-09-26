@@ -160,12 +160,18 @@ Step 3 windows Powershell config:
   		mkdir $archivo
   		cd $archivo
 	}
-	
+
+	function touch {
+		param([string[]]$archivos)
+		foreach ($archivo in $archivos)
+		{
+			New-item -Path . -Name "$archivo" -ItemType "file"
+		}
+	}
+
 	new-alias -name activate .\.env\Scripts\activate
 	function sf {Get-ChildItem -Force}
 	function email {start edge www.gmail.google.com}
-	#univercity
-	function unicauca { cd 'D:\3. Unicauca' ; ls }
 
 	********************
 
