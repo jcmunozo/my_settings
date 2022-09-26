@@ -2,6 +2,15 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     "airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    " Use release branch (recommend)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    
+    " style
+    Plug 'yggdroot/indentline'
+    Plug 'lilydjwg/colorizer'
     "nerd tree
     Plug 'scrooloose/nerdtree'
     Plug 'ryanoasis/vim-devicons'
@@ -14,7 +23,7 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     Plug 'sheerun/vim-polyglot' 
     "telescope
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
     
     "Plugins for javascript
     Plug 'pangloss/vim-javascript'
@@ -25,5 +34,6 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
 
     "Comentary
     Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-surround'
 
 call plug#end()

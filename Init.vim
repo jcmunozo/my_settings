@@ -32,8 +32,9 @@ set splitright          " splir next window right
 set nocompatible        " this come with polyglot
 
 "Vim-plug
-    source ~/AppData/Local/nvim/vim-plug/plugins.vim
+    source ~/AppData/Local/nvim/Vim-plug/plugins.vim
 "Mappings
     source ~/AppData/Local/nvim/general/settings.vim
+    source ~/AppData/Local/nvim/general/coc.vim
 "themes 
     source ~/AppData/Local/nvim/themes/onedark.vim

@@ -2,6 +2,12 @@
 let g:airline_theme="onedark"
 let g:airline#extensions#tabline#enabled = 1
 
+" indenline
+let g:indentLine_char_list = ['¦', '¦', '¦', '¦']
+
+" Background (Vim, GVim)
+let g:indentLine_bgcolor_term = 202
+let g:indentLine_color_term = 239
 
 "Emmet configuration
 let g:user_emmet_mode='n'
@@ -15,9 +21,12 @@ let g:user_emmet_settings={
 
 "Commentary configuration
 vnoremap <C-M> :Commentary<CR>
+" surround
+" whit this plug you can cs'" to change surround '' to "
+" you can delete with ds' or every thing
+" and you cand add surround with ysiw" 
 
-
-"all mappins that i use
+" all mappins that i use
 
 "leader
 let mapleader=" "
@@ -93,3 +102,4 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "<S-Tab>            Toggle selection and move to prev selection
 "<C-q>              Send all items not filtered to quickfixlist(qflist)
 "<M-q>              Send all selected items to qflist 
+"<silent>           is the key of delete
