@@ -1,0 +1,271 @@
+1.  
+	Con :edit $MYVIMRC se va al archivo de configuracion
+	
+	Con w,e,b me muevo al comienzo,al final y nos devolvemos
+ 	al inicio de una palabra.  
+
+	Con W se mueve por palabras y no incluye los puntos o
+	las comas. Lo mismo ocurre con B se devuelve entre 
+	palabras, y la E tambien se comporto igual.
+	
+	visual mode = : indenta todo el codigo
+
+	Con a, i nos ponemos en
+	modo insert, al final y al inicio respectivamente
+	en modo insert.
+
+	Con A nos ubicamos al final de la linea en la que se
+	encuentra y en modo insert
+
+	Con t* va hasta donde encuentre el * fuciona al reves con T mayuscula
+
+	Con f* va y se queda sobre el * o fy va hasta la proxima y
+
+	Combinando dt( elimina todo hasta antes de ( y asi con mas conbinaciones
+
+	Con /\v<word><CR> busca solo la palabra word.
+
+	Con r y una letra: remplazo la letra 
+
+	Con x borro letra por letra
+
+	Con gd voy a la definicion de una funcion
+
+	Con gf para ir a la definicion en otro archivo
+
+	Con ctrl + o me devuelvo al archivo anterior en el
+	buffer 
+	
+	Con ctrl + i hago lo inverso a la anterior
+
+	Con dw borro una palabra a la vez
+
+	Con u deshago los cambios = Undo
+
+	Con Ctrl r vuelvo a lo que hice rehacer = ReUndo
+
+	Con el comando d$ borro lo que este en la linea
+	despues del cursor hasta el final sin
+	borrar la linea caso contrario a dd que borra
+	la linea tambien.
+
+	Con d se pueden usar tambien dw, de, db, d$ es decir
+	se puede combinar d con otros ya vistos
+	
+	Tambien podemos usar numeros para hacer mas rapido 
+	algunos comandos multiplicandolos por decirlo de 
+	alguna manera:
+	2dw, 4dw, 3db, 7w, 7e, 7b ..
+
+	cuando cortamos y pegamos lo que cortamos queda 
+	almacenado en un clickboard.
+
+	Eliminar no existe solo existe Cortar con dd
+	y pegar con p
+	
+	para reordenar se usar dd p
+
+	Con . se repite el ultimo comando, por decir algo eliminar una letra con x luego . y se seguiran borrando
+	
+	Con ; se repite la ultima busqueda, por decir algo f+ luego ; repite la busqueda
+
+	Con * hago una busqueda de ocurrencias de la palabra en la que estoy posicionado
+
+	Con >G se identan todas las filas un espacio hasta el final de l archivo
+
+	con cw se peude cambiar de palabra
+	con ciw se puede cambiar de palabra no importa 
+	donde este el cursor
+
+	Con gg goodgame llego al inicio del archivo.
+
+	Con G llevo al final del archivo
+
+	con #numero de linea + G me desplazo a la linea que 
+	necesito
+	
+	Con <C-[> se pasa al modo normal desde el modo insetar
+
+	con /edad busco todas las coincidencias despues del
+	del cursor
+	
+	con ?edad busco todas las coincidencias.	
+
+	Con % para ir al final de los corchetes de una 
+	funcion o los parentesis, llaves de cualquier cosa
+ 
+	Con 0 llegamos al comiezo de una lista con el signo 
+	de dolar $ legamos al final
+
+	Con ^ nos lleva al primer carcter no vacio, pareciera que
+	es lo mismo que la anterior pero no, la anterior con 0
+	me lleva al inicio no importa si es un espacio o un caracter
+
+	Con :s/the/de reemplazamos el the por de
+
+	Con :s/the/de/g reemplazamos el the por de reemplaza
+	todas las ocurrencias de la linea
+
+	Con :%s/numero/unoalcinco/gc reemplaza todas las 
+	ocurrencias y pregunta si realmente quiere que se haga
+	el cambio.
+
+	Con o hago una nueva linea abajo para insertar
+	Con O hago una nueva linea arriba para insetar
+
+	Con shift+r me mantiene en el modo de reemplazar
+	
+	<C-w>s divide en horizontal
+	<C-w>v divide en vertical
+
+	con :sp {file} abre una ventana horizontal con el archivo
+	con :vsp {file} abre una ventana vertical con el archivo
+
+	<C-w>c cierra la ventana activa
+	<C-w>o cierra todas las ventanas menos la activa
+
+	Con v se puede poner en modo visual, y esn este modo
+	se puede seleccionar desde el cursor hasta donde se 
+	quiera con las flechas o con las letras jklh
+
+	Con :source %    se puede recargar el archivo actual
+
+	Instalar un manejador de plugins para Vim
+	se puede usar Vim plug minimalisvimpluginsmanagaer
+
+	instalacion:
+
+	https://github.com/junegunn/vim-plug
+	
+	:smile esto muestra una grafica
+
+	Con Ctrl+e para bajar(Hacer scroll)
+	Con Ctrl+y para subir(Hacer scroll)
+	Con Ctrl+d para bajar media pagina(Hacer scroll)
+	Con Ctrl+u para subir media pagina(Hacer scroll)
+	Con Ctrl+f para bajar la pagina entera
+	Con Ctrl+b para subir la pagina entera
+	
+	Con s reemplazo el contenido de la letra mas 
+	proximo
+	
+	Con S reemplazo el contenido de toda una linea completa
+
+	Con r puede reemplazar una letra estando en normal 
+	pulsando r y la letra que uno quiere.	
+
+	Con R puedo reemplazar una linea completa	
+
+	Con yw copia la palabra.
+
+	d$ borra desde hasta el final de la linea.
+	es igual a D.
+	
+	Con P pega antes y con p pega despues de la linea
+
+	Con C nos cambia todo hasta el final de la linea Change
+		
+	Con cc nos borra toda la linea y nos pone en modo insert
+
+	Con dG borra hasta el final del fichero
+
+	Con dgg borra desde hasta el comienzo del fichero
+	
+	Con diw se borra la palabra	
+
+	Con di( o di) borras lo que este entre parentesis.
+
+	Con di" di{ se borra su contenido interior
+
+	Con da" di{ di( se borra con todo y contenedores
+
+	Con ci" cambia lo que halla en las comillas
+	
+	Con df! elimina hasta que encuentre un !
+
+	Con df( elimina hasta que encuentre un ( tambien se puede hacer con yf( o yt( hasta antes de la linea.
+
+	Con d$ borra hasta el final de la linea
+	
+	Con d^ borra desde la palabra hacia el inicio de la linea
+
+	Con dG! borra hacia atras.	
+	
+	Con du! borra incluida la ! 
+
+	Con s puedes sustituir la letra y con S mayucula, la linea completa
+
+	Con yi( copia lo que haya entre parentesis
+
+	Con yit copia lo que haya en el tag de html y para pegar hay que pararse en > del tag a pegar
+
+	Con fa busca las a mejor dicho con f busca lo que sea
+	y se mueve hacia adelante de los resultados con ; y 
+	hacia atras de los resultados con ,
+
+	ta igual que el comando anterior solo que se pone 
+	antes de la tecla
+	
+	Con /cosa se busca en el documento las coincidencias 	
+	con cosa y para moverse entre los resultados se usa la 
+	n y N.
+
+	Con * cituaando el cursor en una palabra, usando * se
+	se puede buscar las ocurrencias de esa palabra.
+	
+	Con . se repite la ultima instruccion que se a 
+	realizado.
+
+	Con A; esc y j.j.j.j. pongo ; en cada linea
+	
+	Con g+u pongo en minusculas
+
+	Con g+U pongo en mayusculas
+
+	Con $ voy al final de la linea
+	
+	Con 0 voy al inicio de la linea
+	
+	Con ^ voy al inicio de la linea donde haya una palabra (alt gr + 2 veces { )
+	
+	Con L,M,H nos lleva a la zona baja, media y alta del archivo
+	
+	Con [p pega sin respetar la identacion lo pega abajo
+	
+	Con p] pega sin respetar la identacion lo pega arriba
+
+	Con qa grabo una macro hasta volver a presionar la q y para imvocar
+	a la macro escribo @a
+	
+	Para vimscripts se usa :source <filename> para correr el script
+	o :so %  corre el archivo actual
+
+	dip elimina todo un parrafo		
+
+	:s/,/#/g me sustituye todas las , por un #
+		
+	:%s/,/#/g me sustituye todas las , por un # en todo el
+	archivo
+
+	:g/^[^e]\+$\|[aiou]/d me borra todas las palabras que
+	no tienen solo e en su composicion.
+
+	:g/php/d borra todo donde diga php	
+
+	set wrap para que nuestras lineas de codigo solo esten
+	en la pantalla visible y que no se haga scroll a los 
+	lados.
+	
+	:set colorcolunm = 21 pone una linea rojiza en esa 
+	linea de columna.
+	
+	nnoremap = mapear solo en modo normal y no de forma recursiva
+	
+	Puedo seleccionar por columnas con:
+	estando en modo visual k o j y luego h o l y al final y
+
+	ctrl+a el numero que hay en la linea se incrementa en 1
+
+	Macros buscar infor @h ejecuta 1 vez 200@h ejecuta 200
+	veces
+	

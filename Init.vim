@@ -29,7 +29,11 @@ set smartcase
 set numberwidth=1       " put the number line aline
 set splitbelow          " split next window below
 set splitright          " splir next window right
-set nocompatible        " this come with polyglot
+"set nocompatible        " this come with polyglot
+set foldmethod=indent   " for ocult method with zo open method and zc close method or za for Toggle
+                        " the next line open all method folds when we open a
+                        " file
+autocmd BufRead * normal zR 
 
 "Vim-plug
     source ~/AppData/Local/nvim/Vim-plug/plugins.vim
