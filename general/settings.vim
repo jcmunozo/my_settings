@@ -24,7 +24,7 @@ vnoremap <C-M> :Commentary<CR>
 " surround
 " whit this plug you can cs'" to change surround '' to "
 " you can delete with ds' or every thing
-" and you cand add surround with ysiw" 
+" and you cand add surround with ysiw"
 
 " all mappins that i use
 
@@ -43,9 +43,15 @@ nnoremap <leader>: $a:<Esc>
 "Close present buffer
 nnoremap <leader>bd :bd<CR>
 
+"For delete tab and space aditionals
+autocmd BufWritePre * :%s/\s\+$//e
+
 "nerdtree
 map <leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
+
+"Short a list alfabetically
+vnoremap <leader>s :!sort<CR>
 
 " gitgutter
 nmap <leader>h <Plug>(GitGutterNextHunk)
@@ -108,5 +114,6 @@ nnoremap <leader>gs <cmd>Telescope git_status<cr>
 "<Tab>              Toggle selection and move to next selection
 "<S-Tab>            Toggle selection and move to prev selection
 "<C-q>              Send all items not filtered to quickfixlist(qflist)
-"<M-q>              Send all selected items to qflist 
+"<M-q>              Send all selected items to qflist
 "<silent>           is the key of delete
+

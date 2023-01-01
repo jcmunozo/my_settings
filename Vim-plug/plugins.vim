@@ -7,7 +7,7 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-   
+
     " git integration
     Plug 'airblade/vim-gitgutter'
 
@@ -17,21 +17,24 @@ call plug#begin('~/AppData/Local/nvim/plugged') "dir where plugins will be insta
     "nerd tree
     Plug 'scrooloose/nerdtree'
     Plug 'ryanoasis/vim-devicons'
-    
+
+    " Latex
+    Plug 'lervag/vimtex'
+
     "icons in telescope
     Plug 'kyazdani42/nvim-web-devicons'
 
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'alvan/vim-closetag' 
+    Plug 'alvan/vim-closetag'
     "theme
-    Plug 'joshdick/onedark.vim'    
+    Plug 'joshdick/onedark.vim'
     "polyglot
-    Plug 'sheerun/vim-polyglot' 
+    Plug 'sheerun/vim-polyglot'
     "telescope
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-    
+
     "Plugins for javascript
     Plug 'pangloss/vim-javascript'
     Plug 'maxmellon/vim-jsx-pretty'
