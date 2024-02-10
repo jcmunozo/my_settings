@@ -278,3 +278,4 @@
 	ciw -> change inner word,  
 	cis -> change inner sentence
 	cip -> change inner parraf
+	:help rtp -> runtimepath
