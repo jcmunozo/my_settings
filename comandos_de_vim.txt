@@ -269,3 +269,12 @@
 	Macros buscar infor @h ejecuta 1 vez 200@h ejecuta 200
 	veces
 	: r !ls-al -> trae el resultado del comando al buffer actual
+	:Ex -> modo explorador
+	% en modo explorardor sirve para crear un archivo
+	:w ++p -> para crear un directorio si es necesario
+
+	ci -> change inner
+	ca -> change outer
+	ciw -> change inner word,  
+	cis -> change inner sentence
+	cip -> change inner parraf
