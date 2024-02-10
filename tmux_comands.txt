@@ -1,0 +1,37 @@
+Attach and Detach
+
+$ tmux          -> start new tmux session
+$ tmux attach   -> attach to tmux session running in the background
+<leader>, d	-> kill Detach from tmux session, leaving it running in the background
+<leader>, & 	-> exit and quit tmux
+<leader>, ?	-> lisr all key bindings (press Q to exit help screen)
+
+Session managment
+
+<leader>, )		-> move to next session
+<leader>, (		-> move to previous session
+<leader>, Ctrl+z	-> suspend session
+
+Window managment
+
+<leader>, &	-> kill window
+<leader>, c	-> create new window
+<leader>, n	-> move to next window
+<leader>, p	-> move to previous window
+<leader>, l	-> move to last window
+<leader>, 0-9	-> move to window by index number
+
+Panel managment
+
+<leader>, x			-> kill panel
+<leader>, %			-> vertical split (panes side by side)
+<leader>, "			-> horizontal split (one pane below the other)
+<leader>, o			-> move to other pane
+<leader>, !			-> remove all panes but the current one from the window
+<leader>, q			-> display window index numbers
+<leader>, Ctrl-Up/Down		-> resize current pane (due north/south)
+<leader>, Ctrl-Left/Right	-> resize current pane (due west/east)
+
+Multiplex
+
+<lbraveeader>, :	-> Access tmux command prompt

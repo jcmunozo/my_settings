@@ -268,7 +268,7 @@
 
 	Macros buscar infor @h ejecuta 1 vez 200@h ejecuta 200
 	veces
-	: r !ls-al -> trae el resultado del comando al buffer actual
+	:r !ls-al -> trae el resultado del comando al buffer actual
 	:Ex -> modo explorador
 	% en modo explorardor sirve para crear un archivo
 	:w ++p -> para crear un directorio si es necesario
@@ -279,3 +279,14 @@
 	cis -> change inner sentence
 	cip -> change inner parraf
 	:help rtp -> runtimepath
+	:h vim-modes
+	shift + i -> start insert at the begining of the line, opposite 
+	ZZ -> sale del editor
+	/word <enter> -> search after cursor
+	?word <enter> -> search before cursor
+	:%s/<original word>/<new word>/i -> % all file
+	                                 -> i sensitive case
+	:source %  -> reload file
+	:messages  -> to see last messages
+	:map  -> all defined mappings
+	:map <leader>   -> mappings with the leader 
