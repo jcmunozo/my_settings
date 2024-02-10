@@ -268,4 +268,4 @@
 
 	Macros buscar infor @h ejecuta 1 vez 200@h ejecuta 200
 	veces
-	
+	: r !ls-al -> trae el resultado del comando al buffer actual
