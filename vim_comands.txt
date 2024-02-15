@@ -286,6 +286,7 @@
 	?word <enter> -> search before cursor
 	:%s/<original word>/<new word>/i -> % all file
 	                                 -> i sensitive case
+	:'<,'>s/red/green/g     -> on visual mode, when you have selected text
 	:source %  -> reload file
 	:messages  -> to see last messages
 	:map  -> all defined mappings
