@@ -1,0 +1,30 @@
+-- esto va en el archivo kitty.conf
+
+font_family      FiraCode Nerd Font Mono
+bold_font        FiraCode Nerd Font Mono Bold
+italic_font      FiraCode Nerd Font Mono Italic
+bold_italic_font FiraCode Nerd Font Mono Bold Italic
+
+font_size 12.0
+scrollback_lines 1000
+enable_audio_bell no
+remember_window_size  no
+initial_window_width  1000
+initial_window_height 650
+hide_window_decorations yes
+placement_strategy center
+
+background_opacity 0.95
+
+close_on_child_death yes
+window_padding_width 1
+confirm_os_window_close 0
+
+active_border_color #719cd6
+inactive_border_color #415166
+bell_border_color #f4a261
+
+# BEGIN_KITTY_THEME
+# Kaolin Aurora
+include current-theme.conf
+# END_KITTY_THEME
