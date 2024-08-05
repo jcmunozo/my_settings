@@ -26,6 +26,10 @@ I use windows terminal preview,to open linux terminal.
 installation:
 	run the next comands:
 		sudo apt install zsh
+		
+		fedora:
+		sudo dnf install zsh
+
 	verication:
 		--version
 	default shell:
@@ -41,6 +45,7 @@ Installation:
 	You need to install git and node.js for some oh-my-zsh's plugins
 	then, run the next comand:
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	go to the web page to get the updated comand.
 
 Install theme:
 	open the zshrc file with any code editor:
@@ -69,4 +74,33 @@ installation:
 	if you want to configure again, just run the next comand:
 		p10k configure
 
-see https://github.com/romkatv/powerlevel10k
+	if for some reason rounded borders are no showing, see the p10kzsh.txt file
+
+	see https://github.com/romkatv/powerlevel10k
+
+to get colors on ls and ll comand, instal lsd -> sudo dnf install lsd
+
+to get colors on cat comand install bat -> sudo dnf install bat
+
+put this alias into your .zshrc :
+
+    #python activate env
+    alias activate="source env/bin/activate"
+
+    #lsd alias
+    alias ll="ls -Alh"
+    alias ls="lsd --group-dirs first"
+
+    #bat equal cat 
+    alias cat="bat"
+
+    #Kitterns to see images into the terminal
+    alias icat="kitten icat"
+
+also I am using this basic plugins:
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+plugins=(zsh-syntax-highlighting)
+
+zsh-completions and zsh-syntax-highlighting, look the github repo for more instalation 
+detail
