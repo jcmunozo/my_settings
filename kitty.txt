@@ -8,8 +8,6 @@ bold_italic_font FiraCode Nerd Font Mono Bold Italic
 font_size 12.0
 
 # window size
-initial_window_width  1325
-initial_window_height 633
 remember_window_size  no
 
 # Scrollback and behaviors
