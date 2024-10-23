@@ -99,8 +99,14 @@ put this alias into your .zshrc :
 
 also I am using this basic plugins:
 
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-plugins=(zsh-syntax-highlighting)
+# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+plugins=(
+    git
+    dnf
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
 
 zsh-completions and zsh-syntax-highlighting, look the github repo for more instalation 
 detail
