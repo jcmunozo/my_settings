@@ -1,0 +1,8 @@
+use:
+super + h : to see all keybindings
+super + enter: open a terminal
+super + q : to quit any window
+super + w : to switch wallpapers
+ctrl + super + b : to choose waybar style
+alt + super + b : to choose waybar layout
+super + p : to manipulate the terminal
