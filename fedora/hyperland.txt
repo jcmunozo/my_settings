@@ -1,3 +1,5 @@
+# using the conf of https://github.com/JaKooLit
+
 use:
 super + h : to see all keybindings
 super + enter: open a terminal
