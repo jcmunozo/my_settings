@@ -1,4 +1,4 @@
-My settings for:
+This are my dot files, for fedora and windows:
 
 	- Windows Terminal Preview
 	- Powershell
